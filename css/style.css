@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/*Обнуление стилей*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  font-size: 14px;
+}
+
+/*********************************/
+/*Контейнер*/
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*Переменные*/
+/*****************************/
+/*Миксины*/
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+/***************************/
+/*Осовные стили*/
+.title {
+  color: #000000;
+  font-size: 50px;
+  font-family: 'Conv_Neutraface 2 Disp Greek Titl';
+  padding-bottom: 38px;
+  position: relative;
+}
+.title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  right: 45%;
+  width: 36px;
+  height: 8px;
+  opacity: 0.46;
+  background-color: #d91f1f;
+  margin: 0 auto;
+}
+
+.eat__icon-1 {
+  position: relative;
+  padding-top: 40px;
+}
+
+.eat__icon-1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url(../image/icon3.svg);
+  width: 30px;
+}
+
+.logo {
+  font-family: 'Conv_Neutraface 2 Disp Greek Inline';
+  font-weight: 700;
+  position: relative;
+  font-size: 35px;
+  padding-left: 38px;
+  padding-right: 32px;
+}
+
+.logo:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  left: 0;
+  bottom: 9px;
+  opacity: 0.46;
+  background-color: #d91f1f;
+}
+
+.logo:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 6px;
+  right: 0;
+  bottom: 9px;
+  opacity: 0.46;
+  background-color: #d91f1f;
+}
+
+body {
+  background-image: url(../image/background.jpg);
+  font-family: 'Conv_Neutraface 2 Disp Greek Bold', sans-serif;
+  color: #000;
+}
+
+/*Подключаем шрифты*/
+@font-face {
+  font-family: 'Conv_Neutraface 2 Disp Greek Bold';
+  src: url("fonts/Neutraface 2 Disp Greek Bold.eot");
+  src: local("☺"), url("fonts/Neutraface 2 Disp Greek Bold.woff") format("woff"), url("fonts/Neutraface 2 Disp Greek Bold.ttf") format("truetype"), url("fonts/Neutraface 2 Disp Greek Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_Neutraface 2 Disp Greek Inline';
+  src: url("fonts/Neutraface 2 Disp Greek Inline.eot");
+  src: local("☺"), url("fonts/Neutraface 2 Disp Greek Inline.woff") format("woff"), url("fonts/Neutraface 2 Disp Greek Inline.ttf") format("truetype"), url("fonts/Neutraface 2 Disp Greek Inline.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_Neutraface 2 Disp Greek Thin';
+  src: url("fonts/Neutraface 2 Disp Greek Thin.eot");
+  src: local("☺"), url("fonts/Neutraface 2 Disp Greek Thin.woff") format("woff"), url("fonts/Neutraface 2 Disp Greek Thin.ttf") format("truetype"), url("fonts/Neutraface 2 Disp Greek Thin.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_Neutraface 2 Disp Greek Titl';
+  src: url("fonts/Neutraface 2 Disp Greek Titl.eot");
+  src: local("☺"), url("fonts/Neutraface 2 Disp Greek Titl.woff") format("woff"), url("fonts/Neutraface 2 Disp Greek Titl.ttf") format("truetype"), url("fonts/Neutraface 2 Disp Greek Titl.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*******************************************/
+.header {
+  background-image: url(../image/header__bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding-bottom: 15px;
+}
+.header__inner {
+  padding-top: 30px;
+}
+
+.menu {
+  padding-right: 51px;
+  padding-top: 10px;
+}
+.menu__list {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.menu__list-item {
+  display: inline-block;
+  padding-right: 40px;
+}
+.menu__list-link {
+  color: #000;
+  line-height: 0.91;
+}
+.menu__list-link:hover {
+  color: #d91f1f;
+}
+.menu__btn {
+  display: none;
+}
+
+.eat {
+  background-color: #fff;
+}
+.eat__inner {
+  background-image: url(../image/herbass.jpg);
+  display: flex;
+  justify-content: space-between;
+}
+.eat__inner:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.eat__item {
+  text-align: center;
+  margin: auto 0;
+  max-width: 500px;
+}
+.eat__content {
+  padding: 0 50px;
+}
+.eat__title {
+  font-size: 38px;
+  padding-top: 60px;
+}
+.eat__text {
+  font-family: 'Conv_Neutraface 2 Disp Greek Bold';
+  line-height: 1.17;
+  font-weight: 700;
+  padding: 27px 30px 0;
+  max-width: 400px;
+  font-size: 18px;
+  max-height: 300px;
+  overflow: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.eat__image img {
+  width: 100%;
+  display: block;
+  max-height: 678px;
+}
+
+.footer {
+  background-image: url(../image/herbas__footer.jpg);
+  background-image: url(../image/icon3.svg) center;
+  background-repeat: no-repeat;
+  height: 441px;
+  background-color: #ffffff;
+  padding-left: 91px;
+}
+.footer__logo {
+  padding-top: 137px;
+  display: inline-block;
+}
+.footer__contact {
+  padding-top: 108px;
+}
+.footer__adress {
+  line-height: 0.94;
+  font-size: 16px;
+  font-weight: 700;
+}
+.footer__mail {
+  padding-top: 22px;
+  line-height: 1.2;
+}
+.footer__link a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+}
+.footer__social {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 60px;
+}
+.footer__social a:hover {
+  fill: red;
+}
+.footer__link {
+  padding: 0 4px;
+}
+
+@media (max-width: 1223px) {
+  .container {
+    max-width: 1223px;
+    padding: 0 10px;
+  }
+
+  .title {
+    font-size: 38px;
+    padding-bottom: 20px;
+  }
+
+  .eat__content {
+    padding: 0 20px;
+  }
+
+  .eat__text {
+    font-size: 14px;
+    max-width: 500px;
+    max-height: 180px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    max-width: 1000px;
+    padding: 0 10px;
+  }
+
+  .title {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+
+  .footer {
+    height: 300px;
+  }
+
+  .footer__logo {
+    padding-top: 50px;
+  }
+
+  .footer__contact {
+    padding-top: 40px;
+  }
+}
+.menu__btn {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .eat__inner {
+    display: block;
+  }
+
+  .eat__inner:nth-child(even) {
+    display: block;
+  }
+
+  .eat__image img {
+    display: flex;
+    width: 100%;
+  }
+
+  .eat__text {
+    width: 100%;
+    max-width: none;
+    padding: 9px 80px 20px;
+  }
+
+  .eat__item {
+    width: 100%;
+    max-width: none;
+  }
+
+  .menu__list {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+  }
+
+  .menu__btn {
+    display: block;
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+
+  .menu__btn span {
+    display: block;
+    margin-bottom: 10px;
+    background-color: brown;
+    height: 4px;
+  }
+}
+@media (max-width: 450px) {
+  .eat__text {
+    padding: 4px 10px 20px;
+  }
+
+  .footer__social {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 900px) {
+  .menu__btn {
+    display: none;
+  }
+
+  .menu__list {
+    display: flex !important;
+  }
+}
